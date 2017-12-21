@@ -15,7 +15,7 @@
   </div>
 
   <div class="grid_2">
-    <div class="grid_item grid" style="border: none; font-weight: bold;" ><div class="grid_item">Id </div><div class="grid_item">Name</div><div class="grid_item">salary </div></div>
+    <div class="grid_item grid" style="border: none; font-weight: bold;" ><div class="grid_item">Id </div><div class="grid_item">Name</div><div class="grid_item">Post </div></div>
     <?php
       include "phpread.php";
     ?>
