@@ -8,8 +8,8 @@
   $result=mysql_query("SELECT * FROM `post` WHERE id in(1,2)");
 	while($row=mysql_fetch_array($result))
   {
-		echo '<div class = "grid_item">
-            <div>'.$row['id'].' '.$row['name'].' '.$row['salary'].'</div>
+		echo '<div class = "grid_item grid" style="border: none;">
+            <div class="grid_item">'.$row['id'].' </div><div class="grid_item">'.$row['name'].' </div><div class="grid_item">'.$row['salary'].'</div>
           </div>';
   }
 ?>
