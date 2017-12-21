@@ -9,12 +9,12 @@
     <?php
       $_GET['a'];
       $ids = $_GET['a'];
-      $sdd_db_host='localhost'; // ваш хост
-      $sdd_db_name='kurs'; // ваша бд
-      $sdd_db_user='root'; // пользователь бд
-      $sdd_db_pass=''; // пароль к бд
-      @mysql_connect($sdd_db_host,$sdd_db_user,$sdd_db_pass); // коннект с сервером бд
-      @mysql_select_db($sdd_db_name); // выбор бд
+      $sdd_db_host='localhost';
+      $sdd_db_name='kurs';
+      $sdd_db_user='root';
+      $sdd_db_pass='';
+      @mysql_connect($sdd_db_host,$sdd_db_user,$sdd_db_pass);
+      @mysql_select_db($sdd_db_name);
       $result=mysql_query("SELECT name FROM employees where id = '$ids'");
       $group=mysql_query("SELECT name FROM groups WHERE id in (SELECT id_group from employees where id = '$ids')");
       $postname=mysql_query("SELECT name FROM post WHERE id in (SELECT id_post from employees where id = '$ids')");
