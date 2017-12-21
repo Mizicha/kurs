@@ -9,9 +9,9 @@
 <body>
 
   <div class="grid">
-    <div class = "grid_item" style="padding-left : 10px; text-align: left; font: 20px bold;">Организация</div>
-    <a href="login.php" class="grid_item"><div>Логин</div></a>
-    <a href="register.php" class="grid_item"><div>Регистрация</div></a>
+      <div class = "grid_item" style="padding-left : 10px; text-align: left; font: 20px bold;">Организация</div>
+      <a href="login.php" class="grid_item"><div>Логин</div></a>
+      <a href="register.php" class="grid_item"><div>Регистрация</div></a>
   </div>
 
   <div class="grid_2">
@@ -19,10 +19,6 @@
     <?php
       include "phpread.php";
     ?>
-    <div class="grid_item" >2</div>
-    <div class="grid_item" >3</div>
-    <div class="grid_item" >4</div>
-    <div class="grid_item" >5</div>
   </div>
 
 </body>
