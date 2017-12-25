@@ -4,14 +4,22 @@
   $sdd_db_user='root';
   $sdd_db_pass='';
   @mysql_connect($sdd_db_host,$sdd_db_user,$sdd_db_pass);
-  @mysql_select_db($sdd_db_name); 
-  $result=mysql_query("SELECT id, name FROM employees");
-  $postname=mysql_query("SELECT name FROM post WHERE id in (SELECT id_post from employees)");
-	while($row=mysql_fetch_array($result))
+  @mysql_select_db($sdd_db_name);
+  $query = "SELECT employees.id, employees.name as ename, post.name FROM employees, post WHERE  employees.id_post = post.id";
+  $sql = mysql_query($query);
+  $n = mysql_num_rows($sql);
+	for ($i=0; $i < $n; $i++)
   {
-    $r2=mysql_fetch_array($postname);
-		echo '<a href = "about.php?a='.$row['id'].'" class="grid_item_2" style="border: none;"><div class = "grid_item grid" style="border: none;">
-            <div class="grid_item">'.$row['id'].' </div><div class="grid_item">'.$row['name'].' </div><div class="grid_item">'.$r2['name'].'</div>
-          </div></a>';
+    $string = mysql_fetch_assoc($sql);
+    $eid=$string['id'];
+    $ename=$string['ename'];
+    $pname=$string['name'];
+		echo '<a href = "about.php?a='.$eid.'" class="grid_item_2" style="border: none;">
+            <div class = "grid_item grid" style="border: none;">
+              <div class="grid_item">'.$eid.' </div>
+              <div class="grid_item">'.$ename.' </div>
+              <div class="grid_item">'.$pname.' </div>
+            </div>
+          </a>';
   }
 ?>

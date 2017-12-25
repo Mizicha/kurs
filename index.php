@@ -13,7 +13,6 @@
       <a href="login.php" class="grid_item"><div>Логин</div></a>
       <a href="register.php" class="grid_item"><div>Регистрация</div></a>
   </div>
-
   <div class="grid_2">
     <div class="grid_item grid" style="border: none; font-weight: bold;" ><div class="grid_item">Id </div><div class="grid_item">Name</div><div class="grid_item">Post </div></div>
     <?php
