@@ -5,7 +5,7 @@ html{
 .grid{
   display: grid;
   grid-template-areas: "a b c";
-  padding: 1em;
+
 }
 .grid_2{
   display: grid;

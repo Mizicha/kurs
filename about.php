@@ -23,21 +23,33 @@
       while($res=mysql_fetch_array($result) and $pname=mysql_fetch_array($postname) and $psalary=mysql_fetch_array($postsalary))
       {
         echo'
-          <div class = grid>
-            <div class = grid_item>
-              ИМЯ: '.$res['name'].'
+          <html>
+          <head>
+            <link rel="stylesheet" type="text/css" href="index.css" />
+          </head>
+          <body>
+            <div class="grid">
+                <div class = "grid_item" style="padding-left : 10px; text-align: left; font: 20px bold;">Организация</div>
+                <a href="login.php" class="grid_item"><div>Логин</div></a>
+                <a href="register.php" class="grid_item"><div>Регистрация</div></a>
             </div>
-            <div class = grid_item>
-              ГРУППА: '.$grp['name'].'
+            <div class = grid_2>
+              <div class = grid_item style = "text-align: left;">
+                ИМЯ: '.$res['name'].'
+              </div>
+              <div class = grid_item style = "text-align: left;">
+                ГРУППА: '.$grp['name'].'
+              </div>
+              <div class = grid_item style = "text-align: left;">
+                ДОЛЖНОСТЬ: '.$pname['name'].'
+              </div>
+              <div class = grid_item style = "text-align: left;">
+                Зарплата: '.$psalary['salary'].'
+              </div>
             </div>
-            <div class = grid_item>
-              ДОЛЖНОСТЬ: '.$pname['name'].'
-            </div>
-            <div class = grid_item>
-              Зарплата: '.$psalary['salary'].'
-            </div>
-          </div>
-          <input type="button" value="Изменить">
+            <a href="index.php"><button>Назад</button></a>
+          </body>
+          </html>
         ';
       }
     ?>
