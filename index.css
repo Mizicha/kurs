@@ -5,8 +5,34 @@ html{
 .grid{
   display: grid;
   grid-template-areas: "a b c";
-
 }
+
+.grid3{
+  display: grid;
+  grid-template-areas: "a b b b b b b c c c c c c d d d d d d"
+}
+
+.grid_item3{
+  background: rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(154, 154, 154);
+  text-align: center;
+  font-size: 18px;
+}
+.grid_item3:nth-child(1){
+  grid-area: a;
+}
+
+.grid_item3:nth-child(2){
+  grid-area: b;
+}
+
+.grid_item3:nth-child(3){
+  grid-area: c;
+}
+.grid_item3:nth-child(4){
+  grid-area: d;
+}
+
 .grid_2{
   display: grid;
   grid-template-areas: "a"
